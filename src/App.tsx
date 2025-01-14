@@ -7,9 +7,13 @@ export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-    axios.get<User[]>("https://example.com/users").then((res) => {
+    axios.get("../public/data.json")
+    .then((res) => {
       setUsers(res.data);
     })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
   }, [])
 
   return (
@@ -26,3 +30,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;

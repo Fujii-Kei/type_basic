@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "age": 28,
+    "personalColor": "blue",
+    "hobbies": ["reading", "hiking", "cooking"]
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "age": 34,
+    "personalColor": "green",
+    "hobbies": ["gaming", "cycling"]
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "age": 22,
+    "personalColor": "red",
+    "hobbies": ["music", "traveling", "photography"]
+  }
+]
