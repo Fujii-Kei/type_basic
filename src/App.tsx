@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import { ListItem } from "./components/ListItem";
 import axios from "axios";
-
-type User = {
-  id: number;
-  name: string;
-  age: number;
-  personalColor: string;
-};
+import type { User } from "./types/user";
 
 export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -21,7 +15,13 @@ export const App = () => {
   return (
     <div>
       {users.map(user => (
-        <ListItem id={user.id} name={user.name} age={user.age} personalColor={user.personalColor}/>
+        <ListItem 
+          id={user.id} 
+          name={user.name} 
+          age={user.age} 
+          personalColor={user.personalColor}
+          hobbies={user.hobbies}
+        />
       ))}
     </div>
   );
